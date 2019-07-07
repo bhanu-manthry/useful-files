@@ -1,0 +1,45 @@
+call plug#begin('~/.vim/plugged')
+
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'mattn/emmet-vim'
+Plug 'easymotion/vim-easymotion'
+
+" ES2015 code snippets (Optional)
+Plug 'epilande/vim-es2015-snippets'
+
+" React code snippets
+Plug 'epilande/vim-react-snippets'
+
+" Ultisnips
+Plug 'SirVer/ultisnips'
+
+Plug 'dracula/vim', { 'as': 'dracula' }
+
+Plug 'davidyorr/vim-es6-unused-imports'
+
+call plug#end()
+
+let mapleader=","
+let g:mapleader = ","
+let g:user_emmet_leader_key=','
+
+let g:UltiSnipsExpandTrigger="<C-l>"
+
+set autoindent
+set smarttab
+set smartindent
+set tabstop=2 
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set number
+set ruler
+set termguicolors
+
+syntax on
+colorscheme dracula
+
+autocmd BufWinEnter *.js execute "ES6ImportsHighlight"
+autocmd BufWritePost *.js execute "ES6ImportsHighlight"
+
