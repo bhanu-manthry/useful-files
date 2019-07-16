@@ -75,3 +75,8 @@ nnoremap <C-l> <C-w>l
 
 nnoremap <leader>f :Files<cr>
 nnoremap <leader>t :Tags<cr>
+nnoremap <leader>bfr :Buffers<cr>
+
+inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+
